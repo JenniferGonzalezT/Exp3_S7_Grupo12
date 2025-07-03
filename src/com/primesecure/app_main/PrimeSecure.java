@@ -7,7 +7,7 @@ package com.primesecure.app_main;
 import com.primesecure.servicios.PrimesList;
 
 /**
- * Sistema de gestión de números primos para PrimeSecure
+ * Sistema de gestión de números primos para PrimeSecure.
  * 
  * @author Jennifer y Guiselle
  */

@@ -7,7 +7,7 @@ package com.primesecure.servicios;
 import java.util.ArrayList;
 
 /**
- * Clase para representar una lista de números primos
+ * Clase para representar una lista de números primos.
  * 
  * @author Jennifer y Guiselle
  */
