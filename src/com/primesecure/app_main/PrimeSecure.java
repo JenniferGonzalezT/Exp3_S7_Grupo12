@@ -63,7 +63,6 @@ public class PrimeSecure {
         
         // Mostrar la cantidad de primos en la lista
         System.out.println("Cantidad de números primos en la lista: " + primesList.getPrimesCount());
-        
     }
 
 }
