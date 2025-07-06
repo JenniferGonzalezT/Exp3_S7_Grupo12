@@ -24,21 +24,25 @@ public class PrimeAdderTask implements Runnable {
         this.ultimoNumero = ultimoNumero;
     }
     
-    // Sobreescritura del método run()
-    @Override
+    // Sobreescritura del método run()   
+        @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + " - Inicia agregando números primos desde " + primerNumero + " hasta " + ultimoNumero);
+        System.out.println(Thread.currentThread().getName() + " - Inicia agregando números primos desde " + primerNumero
+                + " hasta " + ultimoNumero);
+        int primesAddedByThisThread = 0;
         for (int i = primerNumero; i <= ultimoNumero; i++) {
             try {
                 if (primesList.isPrime(i)) {
                     primesList.add(i);
+                    primesAddedByThisThread++;
                 }
             } catch (IllegalArgumentException e) {
                 System.out.println(Thread.currentThread().getName() + " error al añadir " + i + ": " + e.getMessage());
             }
         }
+        
         System.out.println(Thread.currentThread().getName() + " - Finaliza la adición de números primos.");
-        System.out.println("Cantidad de primos añadidos en el hilo: " + (primesList.getPrimesCount() - (ultimoNumero - primerNumero + 1)));
+        System.out.println("Cantidad de primos añadidos en el hilo: " + primesAddedByThisThread);
     }
 
 }
