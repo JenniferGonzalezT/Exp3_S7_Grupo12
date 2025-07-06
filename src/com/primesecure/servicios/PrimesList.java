@@ -20,7 +20,7 @@ public class PrimesList extends ArrayList<Integer> {
             return false;
         }
 
-        for (int i = 2; i <= Math.sqrt(numero); i++) {
+        for (int i = 2; i * i <= numero; i++) {
             if (numero % i == 0) {
                 return false;
             }
