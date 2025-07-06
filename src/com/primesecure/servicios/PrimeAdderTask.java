@@ -38,8 +38,7 @@ public class PrimeAdderTask implements Runnable {
             }
         }
         System.out.println(Thread.currentThread().getName() + " - Finaliza la adición de números primos.");
-        System.out.println("Cantidad de primos añadidos en el hilo: " + primesList.getPrimesCount());
+        System.out.println("Cantidad de primos añadidos en el hilo: " + (primesList.getPrimesCount()));
     }
-    
-    
+
 }

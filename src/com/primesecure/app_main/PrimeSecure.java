@@ -21,19 +21,19 @@ public class PrimeSecure {
         
         // Creación de Rangos que procesarán los hilos
         int rango1Inicio = 1;
-        int rango1Fin = 25000;
-        int rango2Inicio = 25001;
-        int rango2Fin = 5000;
-        int rango3Inicio = 5001;
-        int rango3Fin = 75000;
-        int rango4Inicio = 75001;
-        int rango4Fin = 100000;
+        int rango1Fin = 5000;
+        int rango2Inicio = 5001;
+        int rango2Fin = 10000;
+        int rango3Inicio = 10001;
+        int rango3Fin = 15000;
+        int rango4Inicio = 15001;
+        int rango4Fin = 20000;
         
         // Creación de instancia con las tareas para cada rango
-        Runnable tarea1 = new PrimeAdderTask(primesList, rango1Inicio, rango2Fin);
-        Runnable tarea2 = new PrimeAdderTask(primesList, rango1Inicio, rango2Fin);
-        Runnable tarea3 = new PrimeAdderTask(primesList, rango1Inicio, rango2Fin);
-        Runnable tarea4 = new PrimeAdderTask(primesList, rango1Inicio, rango2Fin);
+        Runnable tarea1 = new PrimeAdderTask(primesList, rango1Inicio, rango1Fin);
+        Runnable tarea2 = new PrimeAdderTask(primesList, rango2Inicio, rango2Fin);
+        Runnable tarea3 = new PrimeAdderTask(primesList, rango3Inicio, rango3Fin);
+        Runnable tarea4 = new PrimeAdderTask(primesList, rango4Inicio, rango4Fin);
         
         // Creacion de Hilos con cada tarea
         Thread thread1 = new Thread(tarea1, "Hilo 1");
